@@ -109,6 +109,7 @@ class InterfaceController: WKInterfaceController {
         }
         if currentMode == modes.ADDITION {
             savedNum += num
+            
         }
         if currentMode == modes.SUBTRACTION {
             savedNum -= num

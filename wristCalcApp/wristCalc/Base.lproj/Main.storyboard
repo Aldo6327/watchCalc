@@ -1,24 +1,388 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A278a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f1e-xt-6Xz">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calculator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="wristCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hks-9i-zVz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUx-p0-roj">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="111.5"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kva-oF-WKV">
+                                        <rect key="frame" x="187.5" y="337" width="94" height="98.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
+                                        <state key="normal" title="6">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapped6" destination="BYZ-38-t0r" eventType="touchUpInside" id="AXJ-G7-jAB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ne4-rp-qzY">
+                                        <rect key="frame" x="281.5" y="337" width="93.5" height="98.5"/>
+                                        <color key="backgroundColor" red="0.94509803920000002" green="0.59215686270000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
+                                        <state key="normal" title="-">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="minusBtnSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HLK-vP-Crh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0i-2y-Pob">
+                                        <rect key="frame" x="0.0" y="534.5" width="187.5" height="98.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="60"/>
+                                        <state key="normal" title="0">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapped0" destination="BYZ-38-t0r" eventType="touchUpInside" id="T7C-iM-DFo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFk-a5-eZJ">
+                                        <rect key="frame" x="187.5" y="435.5" width="94" height="99"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
+                                        <state key="normal" title="3">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapped3" destination="BYZ-38-t0r" eventType="touchUpInside" id="pLj-6n-KnB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTU-LX-BQR">
+                                        <rect key="frame" x="281.5" y="435.5" width="93.5" height="99"/>
+                                        <color key="backgroundColor" red="0.94509803920000002" green="0.59215686270000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="plusBtnSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jAi-wu-ifu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6R-wa-bzQ">
+                                        <rect key="frame" x="0.0" y="139.5" width="94" height="98.5"/>
+                                        <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
+                                        <state key="normal" title="C">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clearSelected" destination="BYZ-38-t0r" eventType="touchUpInside" id="r8E-pb-YIP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDy-By-0mR">
+                                        <rect key="frame" x="94" y="139.5" width="93.5" height="98.5"/>
+                                        <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
+                                        <state key="normal" title="+/-">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J83-Q2-8ni">
+                                        <rect key="frame" x="187.5" y="139.5" width="94" height="98.5"/>
+                                        <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
+                                        <state key="normal" title="%">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZb-Be-rUi">
+                                        <rect key="frame" x="281.5" y="139.5" width="93.5" height="98.5"/>
+                                        <color key="backgroundColor" red="0.94509803920000002" green="0.59215686270000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
+                                        <state key="normal" title="/">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="divBtnSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rLm-mJ-UfR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBz-GD-HcL">
+                                        <rect key="frame" x="0.0" y="238" width="94" height="99"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
+                                        <state key="normal" title="7">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapped7" destination="BYZ-38-t0r" eventType="touchUpInside" id="ecU-C3-hl6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQT-ra-bGe">
+                                        <rect key="frame" x="94" y="238" width="93.5" height="99"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
+                                        <state key="normal" title="8">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapped8" destination="BYZ-38-t0r" eventType="touchUpInside" id="iwi-Uh-XKl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7v-8J-LhR">
+                                        <rect key="frame" x="281.5" y="238" width="93.5" height="99"/>
+                                        <color key="backgroundColor" red="0.94509803920000002" green="0.59215686270000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
+                                        <state key="normal" title="x">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="multBtnSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PLw-dw-uJ9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zed-5i-3nb">
+                                        <rect key="frame" x="0.0" y="337" width="94" height="98.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
+                                        <state key="normal" title="4">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapped4" destination="BYZ-38-t0r" eventType="touchUpInside" id="B4N-JK-W1G"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="337-ib-vrh">
+                                        <rect key="frame" x="187.5" y="238" width="94" height="99"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
+                                        <state key="normal" title="9">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapped9" destination="BYZ-38-t0r" eventType="touchUpInside" id="eeN-iY-1ia"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Yh-pm-OHS">
+                                        <rect key="frame" x="0.0" y="435.5" width="94" height="99"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
+                                        <state key="normal" title="1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapped1" destination="BYZ-38-t0r" eventType="touchUpInside" id="GKt-Iz-YT5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGc-Og-or6">
+                                        <rect key="frame" x="94" y="435.5" width="93.5" height="99"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
+                                        <state key="normal" title="2">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapped2" destination="BYZ-38-t0r" eventType="touchUpInside" id="HEy-zd-2NN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9a-lT-Bjq">
+                                        <rect key="frame" x="187.5" y="534.5" width="94" height="98.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
+                                        <state key="normal" title=".">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xg7-J3-0RW">
+                                        <rect key="frame" x="281.5" y="534.5" width="93.5" height="98.5"/>
+                                        <color key="backgroundColor" red="0.94509803920000002" green="0.59215686270000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
+                                        <state key="normal" title="=">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="equalsSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iUr-6i-aUt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQ6-ww-14s">
+                                        <rect key="frame" x="94" y="337" width="93.5" height="98.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
+                                        <state key="normal" title="5">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapped5" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZQx-2z-6ua"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="uZb-Be-rUi" firstAttribute="leading" secondItem="J83-Q2-8ni" secondAttribute="trailing" id="0F3-uA-dtB"/>
+                                    <constraint firstItem="vTU-LX-BQR" firstAttribute="top" secondItem="Ne4-rp-qzY" secondAttribute="bottom" id="0cq-Ml-1qN"/>
+                                    <constraint firstItem="uZb-Be-rUi" firstAttribute="width" secondItem="z6R-wa-bzQ" secondAttribute="width" id="1Lf-Dx-lAs"/>
+                                    <constraint firstItem="Ne4-rp-qzY" firstAttribute="top" secondItem="A7v-8J-LhR" secondAttribute="bottom" id="1iB-VR-VEg"/>
+                                    <constraint firstItem="sQ6-ww-14s" firstAttribute="leading" secondItem="zed-5i-3nb" secondAttribute="trailing" id="2Fs-O7-CnE"/>
+                                    <constraint firstItem="iQT-ra-bGe" firstAttribute="width" secondItem="z6R-wa-bzQ" secondAttribute="width" id="2HM-di-rE8"/>
+                                    <constraint firstItem="Ne4-rp-qzY" firstAttribute="leading" secondItem="kva-oF-WKV" secondAttribute="trailing" id="39U-od-13v"/>
+                                    <constraint firstItem="K9a-lT-Bjq" firstAttribute="leading" secondItem="r0i-2y-Pob" secondAttribute="trailing" id="3gZ-UT-pgp"/>
+                                    <constraint firstItem="nFk-a5-eZJ" firstAttribute="height" secondItem="z6R-wa-bzQ" secondAttribute="height" id="5zH-rq-VDa"/>
+                                    <constraint firstItem="bUx-p0-roj" firstAttribute="width" secondItem="hks-9i-zVz" secondAttribute="width" id="6YM-UD-6LW"/>
+                                    <constraint firstItem="kva-oF-WKV" firstAttribute="top" secondItem="A7v-8J-LhR" secondAttribute="bottom" id="7CL-ZT-Jn1"/>
+                                    <constraint firstItem="aBz-GD-HcL" firstAttribute="top" secondItem="z6R-wa-bzQ" secondAttribute="bottom" id="7ib-TL-UIQ"/>
+                                    <constraint firstItem="z6R-wa-bzQ" firstAttribute="top" secondItem="bUx-p0-roj" secondAttribute="bottom" id="7ze-fR-Ozh"/>
+                                    <constraint firstItem="zed-5i-3nb" firstAttribute="width" secondItem="z6R-wa-bzQ" secondAttribute="width" id="8ei-ek-lOj"/>
+                                    <constraint firstItem="VDy-By-0mR" firstAttribute="width" secondItem="z6R-wa-bzQ" secondAttribute="width" id="8wC-6d-enB"/>
+                                    <constraint firstItem="iQT-ra-bGe" firstAttribute="leading" secondItem="aBz-GD-HcL" secondAttribute="trailing" id="Alq-gc-OeC"/>
+                                    <constraint firstItem="VDy-By-0mR" firstAttribute="leading" secondItem="z6R-wa-bzQ" secondAttribute="trailing" id="ArD-F0-LVE"/>
+                                    <constraint firstItem="337-ib-vrh" firstAttribute="leading" secondItem="iQT-ra-bGe" secondAttribute="trailing" id="B7E-gS-eW9"/>
+                                    <constraint firstItem="0Yh-pm-OHS" firstAttribute="height" secondItem="z6R-wa-bzQ" secondAttribute="height" id="C0d-R5-33b"/>
+                                    <constraint firstItem="Ne4-rp-qzY" firstAttribute="width" secondItem="z6R-wa-bzQ" secondAttribute="width" id="CUM-Ml-5U8"/>
+                                    <constraint firstItem="zed-5i-3nb" firstAttribute="height" secondItem="z6R-wa-bzQ" secondAttribute="height" id="Cgl-AV-3p0"/>
+                                    <constraint firstItem="J83-Q2-8ni" firstAttribute="leading" secondItem="VDy-By-0mR" secondAttribute="trailing" id="CuW-JQ-8L2"/>
+                                    <constraint firstItem="uZb-Be-rUi" firstAttribute="height" secondItem="z6R-wa-bzQ" secondAttribute="height" id="F1R-SY-ESB"/>
+                                    <constraint firstItem="0Yh-pm-OHS" firstAttribute="width" secondItem="z6R-wa-bzQ" secondAttribute="width" id="GCo-2M-XzU"/>
+                                    <constraint firstItem="A7v-8J-LhR" firstAttribute="top" secondItem="uZb-Be-rUi" secondAttribute="bottom" id="GHe-4y-J1D"/>
+                                    <constraint firstItem="z6R-wa-bzQ" firstAttribute="leading" secondItem="hks-9i-zVz" secondAttribute="leading" id="GHe-5w-wez"/>
+                                    <constraint firstItem="z6R-wa-bzQ" firstAttribute="width" secondItem="hks-9i-zVz" secondAttribute="width" multiplier="0.25" id="HmQ-lY-SL6"/>
+                                    <constraint firstItem="337-ib-vrh" firstAttribute="width" secondItem="z6R-wa-bzQ" secondAttribute="width" id="I0s-W8-UFn"/>
+                                    <constraint firstItem="xg7-J3-0RW" firstAttribute="width" secondItem="z6R-wa-bzQ" secondAttribute="width" id="L3z-FU-9J7"/>
+                                    <constraint firstItem="nFk-a5-eZJ" firstAttribute="top" secondItem="kva-oF-WKV" secondAttribute="bottom" id="LGT-Je-x6J"/>
+                                    <constraint firstItem="kva-oF-WKV" firstAttribute="leading" secondItem="337-ib-vrh" secondAttribute="leading" id="LLq-Ch-Qv4"/>
+                                    <constraint firstItem="VDy-By-0mR" firstAttribute="height" secondItem="z6R-wa-bzQ" secondAttribute="height" id="Msy-dF-WMf"/>
+                                    <constraint firstItem="jGc-Og-or6" firstAttribute="leading" secondItem="0Yh-pm-OHS" secondAttribute="trailing" id="NXC-eG-Koo"/>
+                                    <constraint firstAttribute="trailing" secondItem="bUx-p0-roj" secondAttribute="trailing" id="P2v-Za-pme"/>
+                                    <constraint firstItem="uZb-Be-rUi" firstAttribute="top" secondItem="bUx-p0-roj" secondAttribute="bottom" id="PoX-r3-q09"/>
+                                    <constraint firstItem="A7v-8J-LhR" firstAttribute="width" secondItem="z6R-wa-bzQ" secondAttribute="width" id="RQx-Je-Xq3"/>
+                                    <constraint firstItem="jGc-Og-or6" firstAttribute="top" secondItem="sQ6-ww-14s" secondAttribute="bottom" id="S4i-5q-Mck"/>
+                                    <constraint firstItem="jGc-Og-or6" firstAttribute="width" secondItem="z6R-wa-bzQ" secondAttribute="width" id="SGW-jV-OSA"/>
+                                    <constraint firstItem="Ne4-rp-qzY" firstAttribute="height" secondItem="z6R-wa-bzQ" secondAttribute="height" id="Sck-HN-vkt"/>
+                                    <constraint firstItem="xg7-J3-0RW" firstAttribute="top" secondItem="vTU-LX-BQR" secondAttribute="bottom" id="T0L-bN-MP8"/>
+                                    <constraint firstItem="aBz-GD-HcL" firstAttribute="width" secondItem="z6R-wa-bzQ" secondAttribute="width" id="UgW-pe-RlQ"/>
+                                    <constraint firstItem="xg7-J3-0RW" firstAttribute="height" secondItem="z6R-wa-bzQ" secondAttribute="height" id="VqJ-4j-Ll4"/>
+                                    <constraint firstItem="K9a-lT-Bjq" firstAttribute="height" secondItem="z6R-wa-bzQ" secondAttribute="height" id="WZl-Zv-0ic"/>
+                                    <constraint firstItem="A7v-8J-LhR" firstAttribute="leading" secondItem="337-ib-vrh" secondAttribute="trailing" id="WaU-cE-NkU"/>
+                                    <constraint firstItem="bUx-p0-roj" firstAttribute="top" secondItem="hks-9i-zVz" secondAttribute="topMargin" id="WgO-NI-3ov"/>
+                                    <constraint firstItem="J83-Q2-8ni" firstAttribute="height" secondItem="z6R-wa-bzQ" secondAttribute="height" id="X2z-Gn-0zy"/>
+                                    <constraint firstItem="r0i-2y-Pob" firstAttribute="width" secondItem="z6R-wa-bzQ" secondAttribute="width" multiplier="2" id="XJE-lT-Mt8"/>
+                                    <constraint firstItem="0Yh-pm-OHS" firstAttribute="top" secondItem="zed-5i-3nb" secondAttribute="bottom" id="XZZ-ib-hqh"/>
+                                    <constraint firstItem="337-ib-vrh" firstAttribute="top" secondItem="J83-Q2-8ni" secondAttribute="bottom" id="YGB-Kl-7xR"/>
+                                    <constraint firstItem="nFk-a5-eZJ" firstAttribute="leading" secondItem="jGc-Og-or6" secondAttribute="trailing" id="YT6-Wn-g97"/>
+                                    <constraint firstItem="iQT-ra-bGe" firstAttribute="height" secondItem="z6R-wa-bzQ" secondAttribute="height" id="YbL-fR-cEc"/>
+                                    <constraint firstItem="r0i-2y-Pob" firstAttribute="leading" secondItem="hks-9i-zVz" secondAttribute="leading" id="aG8-6i-p9e"/>
+                                    <constraint firstItem="xg7-J3-0RW" firstAttribute="leading" secondItem="K9a-lT-Bjq" secondAttribute="trailing" id="agu-9f-VXz"/>
+                                    <constraint firstItem="vTU-LX-BQR" firstAttribute="width" secondItem="z6R-wa-bzQ" secondAttribute="width" id="ahU-Cp-nhS"/>
+                                    <constraint firstItem="J83-Q2-8ni" firstAttribute="top" secondItem="bUx-p0-roj" secondAttribute="bottom" id="awv-UK-87u"/>
+                                    <constraint firstItem="nFk-a5-eZJ" firstAttribute="width" secondItem="z6R-wa-bzQ" secondAttribute="width" id="bDt-xs-tg1"/>
+                                    <constraint firstItem="kva-oF-WKV" firstAttribute="width" secondItem="z6R-wa-bzQ" secondAttribute="width" id="bM3-SY-TNB"/>
+                                    <constraint firstItem="bUx-p0-roj" firstAttribute="height" secondItem="hks-9i-zVz" secondAttribute="height" multiplier="0.167" id="cgU-WP-NUE"/>
+                                    <constraint firstItem="z6R-wa-bzQ" firstAttribute="height" secondItem="hks-9i-zVz" secondAttribute="height" multiplier="0.148" id="dFb-Mx-0zQ"/>
+                                    <constraint firstItem="r0i-2y-Pob" firstAttribute="top" secondItem="0Yh-pm-OHS" secondAttribute="bottom" id="dwn-jc-5cH"/>
+                                    <constraint firstItem="sQ6-ww-14s" firstAttribute="height" secondItem="z6R-wa-bzQ" secondAttribute="height" id="fgN-b7-5gj"/>
+                                    <constraint firstItem="A7v-8J-LhR" firstAttribute="height" secondItem="z6R-wa-bzQ" secondAttribute="height" id="ftR-BK-3bZ"/>
+                                    <constraint firstItem="zed-5i-3nb" firstAttribute="leading" secondItem="hks-9i-zVz" secondAttribute="leading" id="gVu-ok-eOU"/>
+                                    <constraint firstItem="zed-5i-3nb" firstAttribute="top" secondItem="aBz-GD-HcL" secondAttribute="bottom" id="gkW-5d-9q7"/>
+                                    <constraint firstItem="VDy-By-0mR" firstAttribute="top" secondItem="bUx-p0-roj" secondAttribute="bottom" id="hX6-0m-WtP"/>
+                                    <constraint firstItem="vTU-LX-BQR" firstAttribute="height" secondItem="z6R-wa-bzQ" secondAttribute="height" id="lI8-KP-box"/>
+                                    <constraint firstItem="aBz-GD-HcL" firstAttribute="leading" secondItem="hks-9i-zVz" secondAttribute="leading" id="lcZ-J6-hx2"/>
+                                    <constraint firstItem="0Yh-pm-OHS" firstAttribute="leading" secondItem="hks-9i-zVz" secondAttribute="leading" id="lrr-Xf-AQm"/>
+                                    <constraint firstItem="337-ib-vrh" firstAttribute="height" secondItem="z6R-wa-bzQ" secondAttribute="height" id="pWb-UE-9EX"/>
+                                    <constraint firstItem="aBz-GD-HcL" firstAttribute="height" secondItem="z6R-wa-bzQ" secondAttribute="height" id="ppI-aG-RIx"/>
+                                    <constraint firstItem="iQT-ra-bGe" firstAttribute="top" secondItem="VDy-By-0mR" secondAttribute="bottom" id="qwz-en-Pah"/>
+                                    <constraint firstItem="kva-oF-WKV" firstAttribute="height" secondItem="z6R-wa-bzQ" secondAttribute="height" id="r2m-xg-dnV"/>
+                                    <constraint firstItem="vTU-LX-BQR" firstAttribute="leading" secondItem="nFk-a5-eZJ" secondAttribute="trailing" id="rxR-Gl-jx6"/>
+                                    <constraint firstItem="K9a-lT-Bjq" firstAttribute="width" secondItem="z6R-wa-bzQ" secondAttribute="width" id="st0-dX-IrZ"/>
+                                    <constraint firstItem="sQ6-ww-14s" firstAttribute="top" secondItem="iQT-ra-bGe" secondAttribute="bottom" id="toS-ch-g5D"/>
+                                    <constraint firstItem="r0i-2y-Pob" firstAttribute="height" secondItem="z6R-wa-bzQ" secondAttribute="height" id="u7r-tz-r2v"/>
+                                    <constraint firstItem="J83-Q2-8ni" firstAttribute="width" secondItem="z6R-wa-bzQ" secondAttribute="width" id="vXu-rc-4DO"/>
+                                    <constraint firstItem="jGc-Og-or6" firstAttribute="height" secondItem="z6R-wa-bzQ" secondAttribute="height" id="w6s-KU-y89"/>
+                                    <constraint firstItem="K9a-lT-Bjq" firstAttribute="top" secondItem="nFk-a5-eZJ" secondAttribute="bottom" id="wji-sI-r3v"/>
+                                    <constraint firstItem="sQ6-ww-14s" firstAttribute="width" secondItem="z6R-wa-bzQ" secondAttribute="width" id="x6J-Pa-bD0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hks-9i-zVz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="3ce-Yh-xa2"/>
+                            <constraint firstItem="hks-9i-zVz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JKt-ie-AOh"/>
+                            <constraint firstItem="hks-9i-zVz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QEe-Zk-uYd"/>
+                            <constraint firstItem="hks-9i-zVz" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="a8U-ro-j7Y"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Uee-0j-aNJ"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Calculator" id="kvY-se-vFc"/>
+                    <connections>
+                        <outlet property="userPhoneScreen" destination="bUx-p0-roj" id="P8V-P1-Aqq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="310" y="-547"/>
+        </scene>
+        <!--Notes-->
+        <scene sceneID="rhp-Dw-Pg9">
+            <objects>
+                <viewController id="exZ-eK-9pz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0jd-Hh-pXx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ES8-Rz-2hF"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Notes" id="OPd-hA-pM6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xQL-Pb-XZj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="310" y="356"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Y1j-n2-4ab">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="f1e-xt-6Xz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="73L-Ae-6Dq">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="3kx-fo-nQp"/>
+                        <segue destination="exZ-eK-9pz" kind="relationship" relationship="viewControllers" id="nKl-Oq-7Hx"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cvO-lu-oOZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-478" y="-108"/>
         </scene>
     </scenes>
 </document>
