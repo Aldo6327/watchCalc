@@ -353,14 +353,44 @@
         <!--Notes-->
         <scene sceneID="rhp-Dw-Pg9">
             <objects>
-                <viewController id="exZ-eK-9pz" sceneMemberID="viewController">
+                <viewController id="exZ-eK-9pz" customClass="NotesVC" customModule="wristCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0jd-Hh-pXx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0R4-ij-HrU">
+                                <rect key="frame" x="25" y="40" width="325" height="45"/>
+                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="lzi-sp-6tb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" text="Notes: " textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E25-00-uEh">
+                                <rect key="frame" x="20" y="105" width="335" height="493"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0R4-ij-HrU" firstAttribute="top" secondItem="ES8-Rz-2hF" secondAttribute="top" constant="20" id="7H4-Om-2LN"/>
+                            <constraint firstItem="E25-00-uEh" firstAttribute="top" secondItem="0R4-ij-HrU" secondAttribute="bottom" constant="20" id="7RQ-BN-Luh"/>
+                            <constraint firstItem="0R4-ij-HrU" firstAttribute="leading" secondItem="ES8-Rz-2hF" secondAttribute="leading" constant="25" id="8GQ-Wu-EGd"/>
+                            <constraint firstItem="ES8-Rz-2hF" firstAttribute="trailing" secondItem="0R4-ij-HrU" secondAttribute="trailing" constant="25" id="Ao5-OG-AdV"/>
+                            <constraint firstItem="ES8-Rz-2hF" firstAttribute="trailing" secondItem="E25-00-uEh" secondAttribute="trailing" constant="20" id="BOK-VD-c1S"/>
+                            <constraint firstItem="ES8-Rz-2hF" firstAttribute="bottom" secondItem="E25-00-uEh" secondAttribute="bottom" constant="20" id="DMi-Mp-0cB"/>
+                            <constraint firstItem="E25-00-uEh" firstAttribute="leading" secondItem="ES8-Rz-2hF" secondAttribute="leading" constant="20" id="eEV-iU-Ij9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ES8-Rz-2hF"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Notes" id="OPd-hA-pM6"/>
+                    <connections>
+                        <outlet property="notesTextView" destination="E25-00-uEh" id="en6-01-tKS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xQL-Pb-XZj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -372,6 +402,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="f1e-xt-6Xz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="73L-Ae-6Dq">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

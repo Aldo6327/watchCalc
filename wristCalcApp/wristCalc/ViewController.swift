@@ -47,11 +47,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func plusBtnSelected(_ sender: UIButton) {
-       changeMode(newMode: iphoneModes.ADDITION)
-    }
-    
+ 
     func changeMode(newMode: iphoneModes) {
         if userNumbersString == "0" {
             return
@@ -59,6 +55,11 @@ class ViewController: UIViewController {
         currentMode = newMode
         lastBtnMode = true
     }
+
+    @IBAction func plusBtnSelected(_ sender: UIButton) {
+       changeMode(newMode: iphoneModes.ADDITION)
+    }
+    
     
     @IBAction func minusBtnSelected(_ sender: UIButton) {
         changeMode(newMode: iphoneModes.SUBTRACTION)
@@ -129,7 +130,8 @@ class ViewController: UIViewController {
             userPhoneScreen.text = ("Number is too Large")
             return
         }
-        savedNum = (currentMode == iphoneModes.NOT_SET) ? (Double(labelInt)) : savedNum
+        savedNum = Double(labelInt)
+   //     savedNum = (currentMode == iphoneModes.NOT_SET) ? (Double(labelInt)) : savedNum
         print(savedNum)
         let formatter:NumberFormatter = NumberFormatter()
         formatter.numberStyle = NumberFormatter.Style.decimal
