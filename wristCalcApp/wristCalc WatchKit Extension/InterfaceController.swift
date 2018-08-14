@@ -24,7 +24,7 @@ class InterfaceController: WKInterfaceController {
     var labelString:String = "0"
     
     var currentMode:modes = modes.NOT_SET
-    var savedNum:Int = 0
+    var savedNum:Double = 0
     var lastButtonMode:Bool = false
     
     @IBOutlet var userScreen: WKInterfaceLabel!
@@ -44,16 +44,20 @@ class InterfaceController: WKInterfaceController {
             lastButtonMode = false
             labelString = "0"
         }
+        print(num)
         labelString = labelString.appending("\(num)")
+
+        print(labelString)
         updateText()
     }
 
     func updateText() {
-        guard let labelInt:Int64 = Int64(labelString) else {
+        guard let labelInt:Double = Double(labelString) else {
+            print(labelString)
             userScreen.setText("Number is too Large")
             return
         }
-        savedNum = (currentMode == modes.NOT_SET) ? (Int(labelInt)) : savedNum
+        savedNum = (currentMode == modes.NOT_SET) ? (Double(labelInt)) : savedNum
         
         let formatter:NumberFormatter = NumberFormatter()
         formatter.numberStyle = NumberFormatter.Style.decimal
@@ -101,7 +105,7 @@ class InterfaceController: WKInterfaceController {
         print("% selected")
     }
     @IBAction func equalsSelected() {
-        guard let num:Int = Int(labelString) else {
+        guard let num:Double = Double(labelString) else {
             return
         }
         if currentMode == modes.NOT_SET || lastButtonMode {
