@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    /*
     enum iphoneModes {
         case NOT_SET
         case ADDITION
@@ -24,7 +25,7 @@ class ViewController: UIViewController {
     
     var savedNum:Double = 0
      var currentMode:iphoneModes = iphoneModes.NOT_SET
-    
+    */
     @IBOutlet weak var userPhoneScreen: UILabel!
     @IBAction func tapped0(){tappedNumber(num: 0)}
     @IBAction func tapped1(){tappedNumber(num: 1)}
@@ -47,7 +48,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
- 
+ /*
     func changeMode(newMode: iphoneModes) {
         if userNumbersString == "0" {
             return
@@ -85,6 +86,7 @@ class ViewController: UIViewController {
             userNumbersString = "0"
         }
         userNumbersString = userNumbersString.appending("\(num)")
+        print(userNumbersString)
         updateText()
     }
 
@@ -141,8 +143,119 @@ class ViewController: UIViewController {
         userPhoneScreen.text = str
         print(str)
     }
+    */
     
+    
+    enum modes {
+        case NOT_SET
+        case ADDITION
+        case SUBTRACTION
+        case Multiply
+        case Divide
+        case Percentage
+    }
+    
+    var labelString:String = "0"
+    
+    var currentMode:modes = modes.NOT_SET
+    var savedNum:Double = 0
+    var lastButtonMode:Bool = false
+    
+    
+    func tappedNumber (num: Int){
+        if lastButtonMode {
+            lastButtonMode = false
+            labelString = "0"
+        }
+        print(num)
+        labelString = labelString.appending("\(num)")
+        
+        print(labelString)
+        updateText()
+    }
+    
+    func updateText() {
+        guard let labelInt:Double = Double(labelString) else {
+            print(labelString)
+            userPhoneScreen.text = "Number is too Large"
+            return
+        }
+        savedNum = (currentMode == modes.NOT_SET) ? (Double(labelInt)) : savedNum
+        
+        let formatter:NumberFormatter = NumberFormatter()
+        formatter.numberStyle = NumberFormatter.Style.decimal
+        let nsInt: NSNumber = NSNumber(value: labelInt)
+        let str:String = formatter.string(from: nsInt)!
+        
+        userPhoneScreen.text = str
+        
+    }
+    
+    
+    func changeMode(newMode: modes) {
+        if savedNum == 0 {
+            return
+        }
+        currentMode = newMode
+        lastButtonMode = true
+    }
+    
+    @IBAction func plusSelected() {
+        changeMode(newMode: modes.ADDITION)
+    }
+    
+    @IBAction func minusSelected() {
+        changeMode(newMode: modes.SUBTRACTION)
+    }
+    
+    @IBAction func multiplySelected() {
+        changeMode(newMode: modes.Multiply)
+    }
+    
+    @IBAction func divideSelected() {
+        changeMode(newMode: modes.Divide)
+    }
+    @IBAction func clearSelected() {
+        savedNum = 0
+        labelString = "0"
+        userPhoneScreen.text = "0"
+        currentMode = modes.NOT_SET
+        lastButtonMode = false
+        
+    }
+    @IBAction func percentSelected() {
+        changeMode(newMode: modes.Percentage)
+        print("% selected")
+    }
+    @IBAction func equalsSelected() {
+        guard let num:Double = Double(labelString) else {
+            return
+        }
+        if currentMode == modes.NOT_SET || lastButtonMode {
+            return
+        }
+        if currentMode == modes.ADDITION {
+            savedNum += num
+            
+        }
+        if currentMode == modes.SUBTRACTION {
+            savedNum -= num
+        }
+        if currentMode == modes.Multiply {
+            savedNum *= num
+        }
+        if currentMode == modes.Divide {
+            savedNum /= num
+        }
+        if currentMode == modes.Percentage {
+            
+        }
+        currentMode = modes.NOT_SET
+        labelString = "\(savedNum)"
+        updateText()
+        lastButtonMode = true
+    }
 
-
+    
 }
 

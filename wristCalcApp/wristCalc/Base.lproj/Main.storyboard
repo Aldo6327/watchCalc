@@ -42,12 +42,13 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ne4-rp-qzY">
                                         <rect key="frame" x="281.5" y="337" width="93.5" height="98.5"/>
                                         <color key="backgroundColor" red="0.94509803920000002" green="0.59215686270000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="subtractionIcon">
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="75"/>
+                                        <state key="normal" title="-">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="minusBtnSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HLK-vP-Crh"/>
+                                            <action selector="minusSelected" destination="BYZ-38-t0r" eventType="touchUpInside" id="0oX-iE-eLh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0i-2y-Pob">
@@ -77,23 +78,25 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTU-LX-BQR">
                                         <rect key="frame" x="281.5" y="435.5" width="93.5" height="99"/>
                                         <color key="backgroundColor" red="0.94509803920000002" green="0.59215686270000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="additionIcon">
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="60"/>
+                                        <state key="normal" title="+">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="plusBtnSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jAi-wu-ifu"/>
+                                            <action selector="plusSelected" destination="BYZ-38-t0r" eventType="touchUpInside" id="wBs-mI-fge"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6R-wa-bzQ">
                                         <rect key="frame" x="0.0" y="139.5" width="94" height="98.5"/>
                                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="clearIcon">
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
+                                        <state key="normal" title="C">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="clearSelected" destination="BYZ-38-t0r" eventType="touchUpInside" id="r8E-pb-YIP"/>
+                                            <action selector="clearSelected" destination="BYZ-38-t0r" eventType="touchUpInside" id="GXf-4E-kJD"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDy-By-0mR">
@@ -113,16 +116,17 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="percentSelected" destination="BYZ-38-t0r" eventType="touchUpInside" id="1qp-Iw-kqT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZb-Be-rUi">
                                         <rect key="frame" x="281.5" y="139.5" width="93.5" height="98.5"/>
                                         <color key="backgroundColor" red="0.94509803920000002" green="0.59215686270000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="divideIcon">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="50"/>
+                                        <state key="normal" title="/"/>
                                         <connections>
-                                            <action selector="divBtnSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rLm-mJ-UfR"/>
+                                            <action selector="divideSelected" destination="BYZ-38-t0r" eventType="touchUpInside" id="TZt-Q6-0Bk"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBz-GD-HcL">
@@ -152,12 +156,13 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7v-8J-LhR">
                                         <rect key="frame" x="281.5" y="238" width="93.5" height="99"/>
                                         <color key="backgroundColor" red="0.94509803920000002" green="0.59215686270000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="multiplyIcon">
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="75"/>
+                                        <state key="normal" title="*">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="multBtnSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PLw-dw-uJ9"/>
+                                            <action selector="multiplySelected" destination="BYZ-38-t0r" eventType="touchUpInside" id="KXi-88-Zdd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zed-5i-3nb">
@@ -220,12 +225,13 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xg7-J3-0RW">
                                         <rect key="frame" x="281.5" y="534.5" width="93.5" height="98.5"/>
                                         <color key="backgroundColor" red="0.94509803920000002" green="0.59215686270000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="equalsIcon">
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="60"/>
+                                        <state key="normal" title="=">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="equalsSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iUr-6i-aUt"/>
+                                            <action selector="equalsSelected" destination="BYZ-38-t0r" eventType="touchUpInside" id="YnE-r9-mdn"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQ6-ww-14s">
@@ -241,7 +247,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="uZb-Be-rUi" firstAttribute="leading" secondItem="J83-Q2-8ni" secondAttribute="trailing" id="0F3-uA-dtB"/>
                                     <constraint firstItem="vTU-LX-BQR" firstAttribute="top" secondItem="Ne4-rp-qzY" secondAttribute="bottom" id="0cq-Ml-1qN"/>
@@ -424,12 +430,4 @@
             <point key="canvasLocation" x="-478" y="-108"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="additionIcon" width="50" height="50"/>
-        <image name="clearIcon" width="50" height="50"/>
-        <image name="divideIcon" width="50" height="50"/>
-        <image name="equalsIcon" width="50" height="50"/>
-        <image name="multiplyIcon" width="50" height="50"/>
-        <image name="subtractionIcon" width="50" height="50"/>
-    </resources>
 </document>
