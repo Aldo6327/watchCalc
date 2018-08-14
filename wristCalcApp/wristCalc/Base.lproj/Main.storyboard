@@ -39,11 +39,10 @@
                                             <action selector="tapped6" destination="BYZ-38-t0r" eventType="touchUpInside" id="AXJ-G7-jAB"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ne4-rp-qzY">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ne4-rp-qzY">
                                         <rect key="frame" x="281.5" y="337" width="93.5" height="98.5"/>
                                         <color key="backgroundColor" red="0.94509803920000002" green="0.59215686270000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
-                                        <state key="normal" title="-">
+                                        <state key="normal" image="subtractionIcon">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -75,11 +74,10 @@
                                             <action selector="tapped3" destination="BYZ-38-t0r" eventType="touchUpInside" id="pLj-6n-KnB"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTU-LX-BQR">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTU-LX-BQR">
                                         <rect key="frame" x="281.5" y="435.5" width="93.5" height="99"/>
                                         <color key="backgroundColor" red="0.94509803920000002" green="0.59215686270000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
-                                        <state key="normal" title="+">
+                                        <state key="normal" image="additionIcon">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -87,11 +85,10 @@
                                             <action selector="plusBtnSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jAi-wu-ifu"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6R-wa-bzQ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6R-wa-bzQ">
                                         <rect key="frame" x="0.0" y="139.5" width="94" height="98.5"/>
                                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
-                                        <state key="normal" title="C">
+                                        <state key="normal" image="clearIcon">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -117,11 +114,10 @@
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZb-Be-rUi">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZb-Be-rUi">
                                         <rect key="frame" x="281.5" y="139.5" width="93.5" height="98.5"/>
                                         <color key="backgroundColor" red="0.94509803920000002" green="0.59215686270000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
-                                        <state key="normal" title="/">
+                                        <state key="normal" image="divideIcon">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -153,11 +149,10 @@
                                             <action selector="tapped8" destination="BYZ-38-t0r" eventType="touchUpInside" id="iwi-Uh-XKl"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7v-8J-LhR">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7v-8J-LhR">
                                         <rect key="frame" x="281.5" y="238" width="93.5" height="99"/>
                                         <color key="backgroundColor" red="0.94509803920000002" green="0.59215686270000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
-                                        <state key="normal" title="x">
+                                        <state key="normal" image="multiplyIcon">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -222,11 +217,10 @@
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xg7-J3-0RW">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xg7-J3-0RW">
                                         <rect key="frame" x="281.5" y="534.5" width="93.5" height="98.5"/>
                                         <color key="backgroundColor" red="0.94509803920000002" green="0.59215686270000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="60"/>
-                                        <state key="normal" title="=">
+                                        <state key="normal" image="equalsIcon">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -369,11 +363,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" text="Notes: " textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E25-00-uEh">
-                                <rect key="frame" x="20" y="105" width="335" height="493"/>
+                                <rect key="frame" x="20" y="105" width="335" height="473"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Dv-VX-y9y">
+                                <rect key="frame" x="316" y="584" width="34" height="36"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveNotes:" destination="exZ-eK-9pz" eventType="touchUpInside" id="xxo-Wc-c6C"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -382,7 +387,10 @@
                             <constraint firstItem="0R4-ij-HrU" firstAttribute="leading" secondItem="ES8-Rz-2hF" secondAttribute="leading" constant="25" id="8GQ-Wu-EGd"/>
                             <constraint firstItem="ES8-Rz-2hF" firstAttribute="trailing" secondItem="0R4-ij-HrU" secondAttribute="trailing" constant="25" id="Ao5-OG-AdV"/>
                             <constraint firstItem="ES8-Rz-2hF" firstAttribute="trailing" secondItem="E25-00-uEh" secondAttribute="trailing" constant="20" id="BOK-VD-c1S"/>
-                            <constraint firstItem="ES8-Rz-2hF" firstAttribute="bottom" secondItem="E25-00-uEh" secondAttribute="bottom" constant="20" id="DMi-Mp-0cB"/>
+                            <constraint firstItem="ES8-Rz-2hF" firstAttribute="bottom" secondItem="E25-00-uEh" secondAttribute="bottom" constant="40" id="DMi-Mp-0cB"/>
+                            <constraint firstItem="3Dv-VX-y9y" firstAttribute="top" secondItem="E25-00-uEh" secondAttribute="bottom" constant="6" id="LP9-3Z-zKc"/>
+                            <constraint firstItem="ES8-Rz-2hF" firstAttribute="trailing" secondItem="3Dv-VX-y9y" secondAttribute="trailing" constant="25" id="Q5h-BO-vrZ"/>
+                            <constraint firstItem="3Dv-VX-y9y" firstAttribute="bottom" secondItem="ES8-Rz-2hF" secondAttribute="bottom" constant="2" id="Y7B-OP-tlo"/>
                             <constraint firstItem="E25-00-uEh" firstAttribute="leading" secondItem="ES8-Rz-2hF" secondAttribute="leading" constant="20" id="eEV-iU-Ij9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ES8-Rz-2hF"/>
@@ -394,7 +402,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xQL-Pb-XZj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="310" y="356"/>
+            <point key="canvasLocation" x="309.60000000000002" y="355.7721139430285"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Y1j-n2-4ab">
@@ -416,4 +424,12 @@
             <point key="canvasLocation" x="-478" y="-108"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="additionIcon" width="50" height="50"/>
+        <image name="clearIcon" width="50" height="50"/>
+        <image name="divideIcon" width="50" height="50"/>
+        <image name="equalsIcon" width="50" height="50"/>
+        <image name="multiplyIcon" width="50" height="50"/>
+        <image name="subtractionIcon" width="50" height="50"/>
+    </resources>
 </document>
