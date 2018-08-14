@@ -21,16 +21,16 @@
                         </group>
                         <group width="1" height="0.16600000000000001" alignment="left" id="c8E-JM-fil">
                             <items>
-                                <button width="0.25" height="1" alignment="left" title="AC" id="Ot3-lc-LDC">
+                                <button width="0.25" height="1" alignment="left" title="C" id="Ot3-lc-LDC">
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <connections>
                                         <action selector="clearSelected" destination="AgC-eL-Hgc" id="PVC-MB-pmm"/>
                                     </connections>
                                 </button>
-                                <button width="0.25" height="1" alignment="left" title="+/-" id="4KA-a7-aqt">
+                                <button width="0.25" height="1" alignment="left" title="+/-" enabled="NO" id="4KA-a7-aqt">
                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </button>
-                                <button width="0.25" height="1" alignment="left" title="%" id="79k-xm-lVs">
+                                <button width="0.25" height="1" alignment="left" title="%" enabled="NO" id="79k-xm-lVs">
                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <connections>
                                         <action selector="percentSelected" destination="AgC-eL-Hgc" id="hF6-tE-5DX"/>
@@ -136,7 +136,7 @@
                                         <action selector="tapped0" destination="AgC-eL-Hgc" id="n7b-8W-izN"/>
                                     </connections>
                                 </button>
-                                <button width="0.25" height="1" alignment="left" title="." id="qgy-xu-WA8">
+                                <button width="0.25" height="1" alignment="left" title="." enabled="NO" id="qgy-xu-WA8">
                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </button>
                                 <button width="0.25" height="1" alignment="left" title="=" id="4hg-z6-jue">
